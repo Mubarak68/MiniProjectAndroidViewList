@@ -1,5 +1,5 @@
 package com.example.miniprojectandroid1.model;
 
-public enum EnumType {
+public enum TransactionType {
     DIPOSIT,WITHDRAWAL,TRANSFER
 }

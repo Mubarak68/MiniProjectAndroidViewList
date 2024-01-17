@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textViewId" type="id" />
+    <item name="textViewDate" type="id" />
+    <item name="textViewType" type="id" />
+    <item name="textViewAmount" type="id" />
+    <item name="textViewBalance" type="id" />
+    <item name="textViewAccount" type="id" />
+</resources>

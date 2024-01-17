@@ -1,16 +1,18 @@
 package com.example.miniprojectandroid1.model;
 
-public class TransactionModel {
+import java.util.Date;
+
+public class Transaction {
     private int id;
-    private String date;
-    private EnumType transType;
+    private String Date;
+    private TransactionType transType;
     private double amount;
     private double balance;
     private int account;
 
-    public TransactionModel(int id, String date, EnumType transType, double amount, double balance, int account) {
+    public Transaction(int id, String date, TransactionType transType, double amount, double balance, int account) {
         this.id = id;
-        this.date = date;
+        Date = date;
         this.transType = transType;
         this.amount = amount;
         this.balance = balance;
@@ -22,10 +24,11 @@ public class TransactionModel {
     }
 
     public String getDate() {
-        return date;
+
+        return Date;
     }
 
-    public EnumType getTransType() {
+    public TransactionType getTransType() {
         return transType;
     }
 
