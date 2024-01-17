@@ -1,8 +1,9 @@
 package com.example.miniprojectandroid1.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Transaction {
+public class Transaction implements Serializable {
     private int id;
     private String Date;
     private TransactionType transType;
@@ -20,6 +21,7 @@ public class Transaction {
     }
 
     public int getId() {
+
         return id;
     }
 
@@ -29,6 +31,7 @@ public class Transaction {
     }
 
     public TransactionType getTransType() {
+
         return transType;
     }
 

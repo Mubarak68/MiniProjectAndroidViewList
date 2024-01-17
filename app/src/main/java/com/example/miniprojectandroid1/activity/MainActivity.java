@@ -4,47 +4,44 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import android.content.Intent;
 import android.os.Bundle;
-
 import com.example.miniprojectandroid1.R;
 import com.example.miniprojectandroid1.adapter.TransactionAdapter;
 import com.example.miniprojectandroid1.model.Transaction;
-import com.example.miniprojectandroid1.model.TransactionType;
 import com.example.miniprojectandroid1.transactionRepo.TransactionRepo;
+import com.example.miniprojectandroid1.transactioninterface.InterFaceTransaction;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements InterFaceTransaction {
     RecyclerView bankcard;
-    private ArrayList<Transaction> transactionsLists = new ArrayList<>();
-
-    public static final String TRANSACTION_KEY = "TRANSACTION_KEY";
-
+    ArrayList<Transaction> transactionsLists;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         bankcard = findViewById(R.id.TransactionCardRV);
-        TRANSACTION_KEY = findViewById(R.id.)
-
-
-        TransactionAdapter transactionAdapter = new TransactionAdapter(transactionsLists);
-        bankcard.setAdapter(transactionAdapter);
-
+        bankcard.setLayoutManager(new LinearLayoutManager(this));
+        transactionsLists = TransactionRepo.getInstance().generateDummyData(5);
         bankcard.addItemDecoration(new DividerItemDecoration(this,LinearLayoutManager.VERTICAL));
-        bankcard.setLayoutManager(new LinearLayoutManager(this));
+        TransactionAdapter transactionsAdapter = new TransactionAdapter(transactionsLists, this);
 
-        getSupportActionBar().setTitle("TRANSACTION_KEY");
-
-
-        bankcard = findViewById(R.id.TransactionCardRV);
-        bankcard.setLayoutManager(new LinearLayoutManager(this));
-        TransactionAdapter transactionsAdapter = new TransactionAdapter(TransactionRepo.getInstance());
-
+        bankcard.setAdapter(transactionsAdapter);
 
     }
+
+    @Override
+    public void onAccountItemClicker(Transaction transaction) {
+        Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+        intent.putExtra("TRANSACTION_KEY", transactionsLists);
+        startActivities(intent);
+    }
+
+    private void startActivities(Intent intent) {
+    }
+
 }
