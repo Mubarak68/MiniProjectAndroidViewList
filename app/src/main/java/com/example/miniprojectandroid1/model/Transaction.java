@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Transaction implements Serializable {
     private int id;
-    private String Date;
+    private String date;
     private TransactionType transType;
     private double amount;
     private double balance;
@@ -13,7 +13,7 @@ public class Transaction implements Serializable {
 
     public Transaction(int id, String date, TransactionType transType, double amount, double balance, int account) {
         this.id = id;
-        Date = date;
+        this.date = date;
         this.transType = transType;
         this.amount = amount;
         this.balance = balance;
@@ -27,7 +27,7 @@ public class Transaction implements Serializable {
 
     public String getDate() {
 
-        return Date;
+        return date;
     }
 
     public TransactionType getTransType() {

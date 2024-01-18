@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/darkText</item>
+        <item name="android:textColor">@color/pastelBackground</item>
+        <item name="android:colorPrimary">@color/pastelPrimary</item>
+        <item name="android:colorPrimaryDark">@color/pastelPrimaryDark</item>
+        <item name="android:colorAccent">@color/pastelAccent</item>
+    </style>
+
+
+    <color name="pastelBackground">#F0F4C3</color>
+    <color name="darkText">#333333</color>
+    <color name="pastelPrimary">#81C784</color>
+    <color name="pastelPrimaryDark">#4CAF50</color>
+    <color name="pastelAccent">#FFB74D</color>
+
+</resources>

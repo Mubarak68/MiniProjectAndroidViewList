@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements InterFaceTransact
     @Override
     public void onAccountItemClicker(Transaction transaction) {
         Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-        intent.putExtra("TRANSACTION_KEY", transactionsLists);
-        startActivities(intent);
+        intent.putExtra("TRANSACTION_KEY", transaction);
+        startActivity(intent);
     }
 
     private void startActivities(Intent intent) {

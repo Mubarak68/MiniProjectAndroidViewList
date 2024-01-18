@@ -2,45 +2,58 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_transaction_details"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/black"
+    android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:theme="@style/Base.Theme.Transactions">
 
     <TextView
         android:id="@+id/textViewId"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Transaction ID: " />
+        android:layout_height="50dp"
+        android:text="Transaction ID: "
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewDate"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date: " />
+        android:layout_height="50dp"
+        android:text="Date: "
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewType"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Type: " />
+        android:layout_height="50dp"
+        android:text="Type: "
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewAmount"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Amount: " />
+        android:layout_height="50dp"
+        android:text="Amount: "
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewBalance"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Balance: " />
+        android:layout_height="50dp"
+        android:text="Balance: "
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewAccount"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Account: " />
+        android:layout_height="50dp"
+        android:text="Account: "
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
